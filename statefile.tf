@@ -1,9 +1,9 @@
 terraform {
   	required_version = "> 0.9.0"
 	backend "s3" {
-		bucket = "${var.s3_bucket_name}"
+		bucket = "tsys-statefile-prototype"
 		key    = "bootstrap-testing-ec2-windows.tfstate"
-		region = "${var.aws_region}"
+		region = "us-west-2"
 		encrypt	= "true"
 	}
 }
