@@ -1,3 +1,5 @@
+#security group to allow WinRM connection
+
 resource "aws_security_group" "winrm_sg" {
 
   name        = "security group for winrm"

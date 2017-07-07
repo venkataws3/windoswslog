@@ -1,3 +1,6 @@
+
+#Windows AMI selection
+
 data "aws_ami" "amazon_windows_2012R2" {
  most_recent = true
  owners      = ["amazon"]
@@ -6,10 +9,9 @@ data "aws_ami" "amazon_windows_2012R2" {
     values = ["Windows_Server-2012-R2_RTM-English-64Bit-Base-*"]
   }
 }
-#resource "aws_iam_instance_profile" "instance_profile" {
-#name="instance_profile"
-#role="AmazonEC2RoleforSSM"
-#}
+
+#windows-ec2-instance provision
+
 resource "aws_instance" "winrm" {
 
  instance_type = "${var.ins_type}"

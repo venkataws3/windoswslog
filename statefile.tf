@@ -1,3 +1,5 @@
+#for storing terraform state file remotely in s3
+
 terraform {
   	required_version = "> 0.9.0"
 	backend "s3" {
