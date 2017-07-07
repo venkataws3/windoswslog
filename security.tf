@@ -4,7 +4,7 @@ resource "aws_security_group" "winrm_sg" {
 
   description = "Used in the terraform"
 
-vpc_id="vpc-01859266"
+vpc_id="${var.aws_vpc_id}"
 
   ingress {
 

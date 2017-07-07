@@ -37,3 +37,4 @@ variable "including_global_services" {
 variable "s3_aws_region" {
   type="string"
 }
+variable "aws_vpc_id" {}
