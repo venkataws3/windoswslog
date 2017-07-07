@@ -1,17 +1,10 @@
 data "aws_ami" "amazon_windows_2012R2" {
-
  most_recent = true
-
  owners      = ["amazon"]
-
   filter {
-
     name   = "name"
-
     values = ["Windows_Server-2012-R2_RTM-English-64Bit-Base-*"]
-
   }
-
 }
 #resource "aws_iam_instance_profile" "instance_profile" {
 #name="instance_profile"
@@ -25,7 +18,6 @@ resource "aws_instance" "winrm" {
  subnet_id="${var.vpc_subnet_id}"
  key_name = "${var.key_name}"
  vpc_security_group_ids=["${aws_security_group.winrm_sg.id}"]
-
 user_data = <<EOF
 <powershell>
 
