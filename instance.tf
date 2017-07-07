@@ -18,6 +18,7 @@ resource "aws_instance" "winrm" {
  subnet_id="${var.vpc_subnet_id}"
  key_name = "${var.key_name}"
  vpc_security_group_ids=["${aws_security_group.winrm_sg.id}"]
+
 user_data = <<EOF
 <powershell>
 
